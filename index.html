@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wow Tailor's Center | Everything a Tailor Needs in One Place | Kampala, Uganda</title>
+  <meta name="description" content="Wow Tailor's Center in Kampala - Your one-stop shop for sewing accessories, fabric materials, machine parts & tailoring tools. Affordable, reliable & convenient. Visit us near Owino Market.">
+  <meta name="keywords" content="tailor supplies Kampala, sewing accessories Uganda, threads needles Kampala, fabric materials Owino, Wow Tailor Center">
+  <meta name="author" content="Wow Tailor's Center">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Wow Tailor's Center | Kampala">
+  <meta property="og:description" content="Everything a Tailor Needs in One Place - Quality sewing supplies at affordable prices.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_UG">
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1E3A8A;
+      --accent: #F59E0B;
+      --bg: #F8FAFC;
+      --text: #1E293B;
+      --light: #FFFFFF;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --radius: 8px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Open Sans',sans-serif; color:var(--text); background:var(--bg); line-height:1.6; }
+    h1,h2,h3,h4 { font-family:'Poppins',sans-serif; color:var(--primary); }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+    .container { max-width:1200px; margin:0 auto; padding:0 1.5rem; }
+    
+    /* Header */
+    header { background:var(--light); box-shadow:var(--shadow); position:sticky; top:0; z-index:100; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; }
+    .logo { font-size:1.5rem; font-weight:700; color:var(--primary); }
+    .logo span { color:var(--accent); }
+    .nav-links { display:flex; gap:1.5rem; }
+    .nav-links a { font-weight:500; transition:color 0.3s; }
+    .nav-links a:hover { color:var(--accent); }
+    .menu-toggle { display:none; font-size:1.5rem; cursor:pointer; }
+    
+    /* Hero */
+    .hero { background:linear-gradient(135deg, var(--primary), #3B82F6); color:var(--light); padding:4rem 0; text-align:center; }
+    .hero h1 { font-size:2.5rem; margin-bottom:1rem; color:var(--light); }
+    .hero p { font-size:1.1rem; max-width:600px; margin:0 auto 2rem; opacity:0.9; }
+    .btn-group { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .btn { padding:0.8rem 1.5rem; border-radius:var(--radius); font-weight:600; display:inline-flex; align-items:center; gap:0.5rem; transition:transform 0.2s, box-shadow 0.2s; cursor:pointer; border:none; }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 6px 12px rgba(0,0,0,0.2); }
+    .btn-primary { background:var(--accent); color:#111; }
+    .btn-secondary { background:transparent; border:2px solid var(--light); color:var(--light); }
+    
+    /* Sections */
+    section { padding:4rem 0; }
+    .section-title { text-align:center; margin-bottom:2.5rem; font-size:2rem; }
+    .section-title span { color:var(--accent); }
+    
+    /* About */
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center; }
+    .about-text ul { list-style:none; margin-top:1rem; }
+    .about-text li { margin-bottom:0.5rem; display:flex; align-items:center; gap:0.5rem; }
+    .about-text i { color:var(--accent); }
+    
+    /* Products */
+    .products-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; }
+    .product-card { background:var(--light); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:transform 0.3s; }
+    .product-card:hover { transform:translateY(-5px); }
+    .product-img { height:180px; background:#E2E8F0; display:flex; align-items:center; justify-content:center; color:#64748B; font-size:3rem; }
+    .product-content { padding:1.2rem; }
+    .product-content h3 { margin-bottom:0.5rem; }
+    .price-note { color:#64748B; font-size:0.9rem; margin-top:0.5rem; font-style:italic; }
+    
+    /* Gallery */
+    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; }
+    .gallery-item { height:150px; background:#CBD5E1; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; color:#475569; cursor:pointer; }
+    
+    /* Contact */
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .contact-info { background:var(--light); padding:2rem; border-radius:var(--radius); box-shadow:var(--shadow); }
+    .contact-item { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem; }
+    .contact-item i { color:var(--accent); font-size:1.2rem; margin-top:0.2rem; }
+    .map-container { background:#E2E8F0; height:100%; min-height:300px; border-radius:var(--radius); overflow:hidden; }
+    .map-container iframe { width:100%; height:100%; border:0; }
+    
+    /* Footer */
+    footer { background:var(--primary); color:var(--light); padding:2rem 0; text-align:center; margin-top:2rem; }
+    
+    /* Floating Buttons */
+    .float-btns { position:fixed; bottom:1.5rem; right:1.5rem; display:flex; flex-direction:column; gap:0.8rem; z-index:99; }
+    .float-btn { width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:white; box-shadow:0 4px 10px rgba(0,0,0,0.3); transition:transform 0.2s; }
+    .float-btn:hover { transform:scale(1.1); }
+    .whatsapp-float { background:#25D366; }
+    .call-float { background:var(--accent); color:#111; }
+    
+    /* Mobile */
+    @media(max-width:768px) {
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:var(--light); flex-direction:column; padding:1rem; box-shadow:var(--shadow); }
+      .nav-links.active { display:flex; }
+      .menu-toggle { display:block; }
+      .hero h1 { font-size:2rem; }
+      .about-grid, .contact-grid { grid-template-columns:1fr; }
+    }
+    
+    @media(max-width:480px) {
+      .hero { padding:3rem 0; }
+      section { padding:3rem 0; }
+      .btn { width:100%; justify-content:center; }
+      .btn-group { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Wow <span>Tailor's</span> Center</div>
+        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Everything a Tailor Needs in One Place</h1>
+      <p>Affordable, high-quality sewing accessories, fabrics, and tools for professionals, students, and home sewers in Kampala, Uganda.</p>
+      <div class="btn-group">
+        <a href="tel:+256703893139" class="btn btn-primary"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a href="https://wa.me/256703893139" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Us</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>Your Trusted Tailoring Partner in Kampala</h3>
+          <p>Wow Tailor's Center is a dedicated one-stop shop for all sewing and tailoring essentials in Kampala. Located near high-traffic market areas like Owino, we stock everything from basic threads and needles to specialized machine parts and fashion add-ons.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Affordable prices for every budget</li>
+            <li><i class="fas fa-check-circle"></i> Wide range of quality accessories</li>
+            <li><i class="fas fa-check-circle"></i> Organized, easy-to-navigate shop (5ft x 10ft well-organized space)</li>
+            <li><i class="fas fa-check-circle"></i> Friendly, expert advice for beginners & pros</li>
+          </ul>
+          <p><strong>Mission:</strong> To provide affordable and quality tailoring materials in one convenient place.</p>
+        </div>
+        <div class="about-img" style="background:#E2E8F0; height:300px; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; color:#64748B; flex-direction:column; text-align:center; padding:1rem;">
+          <i class="fas fa-image" style="font-size:3rem; margin-bottom:0.5rem;"></i>
+          <span>Shop Photo Placeholder</span>
+          <small style="margin-top:0.5rem; opacity:0.7;">Replace with your actual shop photo</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" style="background:#F1F5F9;">
+    <div class="container">
+      <h2 class="section-title">Our <span>Products</span></h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img"><i class="fas fa-scissors"></i></div>
+          <div class="product-content">
+            <h3>Sewing Essentials</h3>
+            <p>Hand & machine needles, threads in all colors, bobbins, pins & pin cushions.</p>
+            <p class="price-note">Contact for pricing</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img"><i class="fas fa-ribbon"></i></div>
+          <div class="product-content">
+            <h3>Fabric Accessories</h3>
+            <p>Ribbons, lace, bindings, elastic bands, interfacing & stiffeners.</p>
+            <p class="price-note">Contact for pricing</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img"><i class="fas fa-gear"></i></div>
+          <div class="product-content">
+            <h3>Machine Accessories</h3>
+            <p>Sewing machine oil, machine needles, basic spare parts & maintenance kits.</p>
+            <p class="price-note">Contact for pricing</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img"><i class="fas fa-ruler-combined"></i></div>
+          <div class="product-content">
+            <h3>Measuring & Cutting Tools</h3>
+            <p>Measuring tapes, tailor scissors, chalk, rulers & cutting mats.</p>
+            <p class="price-note">Contact for pricing</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img"><i class="fas fa-shirt"></i></div>
+          <div class="product-content">
+            <h3>Fashion Add-ons</h3>
+            <p>Buttons, zippers, hooks, decorative trims & embellishments.</p>
+            <p class="price-note">Contact for pricing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <h2 class="section-title">Shop <span>Gallery</span></h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">🧵 Thread Display</div>
+        <div class="gallery-item">✂️ Tools Section</div>
+        <div class="gallery-item">🏪 Shop Interior</div>
+        <div class="gallery-item">✨ New Arrivals</div>
+      </div>
+      <p style="text-align:center; margin-top:1rem; color:#64748B; font-size:0.9rem;">
+        <em>Gallery photos coming soon! Visit us in person to see our full range.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="background:#F1F5F9;">
+    <div class="container">
+      <h2 class="section-title">Contact <span>Us</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div><strong>Phone:</strong><br><a href="tel:+256703893139">+256 703 893 139</a></div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div><strong>WhatsApp:</strong><br><a href="https://wa.me/256703893139" target="_blank">+256 703 893 139</a></div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div><strong>Email:</strong><br><a href="mailto:wowtailorscentre@gmail.com">wowtailorscentre@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-location-dot"></i>
+            <div><strong>Location:</strong><br>Kampala, Uganda<br><em>Near Owino Market area (high-traffic zone)</em></div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div><strong>Business Hours:</strong><br>Mon - Sat: 8:00 AM - 7:00 PM<br>Sun: 10:00 AM - 4:00 PM</div>
+          </div>
+          <a href="https://wa.me/256703893139" target="_blank" class="btn btn-primary" style="margin-top:1rem; width:100%; justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Chat with Us on WhatsApp
+          </a>
+        </div>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.544085130933!2d32.5665!3d0.3136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb7b8c3e5c5d%3A0x5c3e5c5d8c3e5c5d!2sOwino%20Market%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Wow Tailor's Center. All rights reserved.</p>
+      <p style="margin-top:0.5rem; opacity:0.8; font-size:0.9rem;">Everything a Tailor Needs in One Place | Kampala, Uganda</p>
+      <p style="margin-top:0.3rem; opacity:0.7; font-size:0.85rem;">
+        <i class="fas fa-envelope"></i> wowtailorscentre@gmail.com
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <div class="float-btns">
+    <a href="https://wa.me/256703893139" target="_blank" class="float-btn whatsapp-float" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+256703893139" class="float-btn call-float" title="Call Us">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- JS -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    
+    // Close menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+    
+    // Auto-update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
